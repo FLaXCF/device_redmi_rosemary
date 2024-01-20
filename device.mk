@@ -9,14 +9,6 @@ DEVICE_PATH := device/redmi/rosemary
 # Inherit virtual_ab_ota product
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
-# Get non-open-source specific aspects
-$(call inherit-product, vendor/redmi/rosemary/rosemary-vendor.mk)
-
-$(call inherit-product, vendor/mediatek/opensource/mtk-builds.mk)
-
-# Setup dalvik vm configs
-$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
-
 # Include Dev GSI Keys
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
